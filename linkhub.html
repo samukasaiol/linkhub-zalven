@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zalven - Início</title>
+    
+    <!-- Ícones (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <style>
+        /* --- Reset e Configurações Globais --- */
+        :root {
+            --purple: #C82AEF;
+            --dark-bg: #0B0410;
+            --text-primary: #FFFFFF;
+            --text-secondary: #c7c1d1;
+            --card-bg: rgba(25, 18, 36, 0.5); /* Fundo do card mais escuro e menos transparente */
+            --card-border: rgba(255, 255, 255, 0.1);
+            --hover-bg: rgba(255, 255, 255, 0.08);
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* --- Fundo de Vídeo --- */
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .background-video iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 177.77vh; /* Proporção 16:9 */
+            min-width: 100vw;
+            height: 56.25vw; /* Proporção 16:9 */
+            min-height: 100vh;
+            transform: translate(-50%, -50%);
+            filter: brightness(0.4);
+            pointer-events: none;
+        }
+
+        /* --- Container Principal (O Card de Vidro) --- */
+        .linkhub-container {
+            width: 100%;
+            max-width: 420px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            
+            /* Animação de entrada */
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s 0.2s forwards ease-out;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* --- Header do Card --- */
+        .profile-header .logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .profile-header h1 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0;
+            color: var(--text-primary);
+        }
+
+        .profile-header p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin: 5px 0 30px 0;
+        }
+
+        /* --- Botões de Ação --- */
+        .action-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .action-link {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .action-link:hover {
+            background: var(--hover-bg);
+            border-color: var(--purple);
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(200, 42, 239, 0.3);
+        }
+
+        .action-link .icon {
+            font-size: 1.8rem;
+            color: var(--purple);
+            width: 50px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .action-link .text-content strong {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .action-link .text-content span {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* --- Rodapé com Ícones Sociais --- */
+        .social-footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--card-border);
+        }
+
+        .social-footer a {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-footer a:hover {
+            color: var(--purple);
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="background-video">
+        <iframe src="https://www.youtube.com/embed/P68V3iH4TeE?autoplay=1&mute=1&loop=1&playlist=P68V3iH4TeE&controls=0&showinfo=0&rel=0" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+    </div>
+    
+    <div class="linkhub-container">
+        
+        <header class="profile-header">
+            <img src="https://i.imgur.com/3VB294s.png" alt="Zalven Logo" class="logo">
+            <h1>Samuel Souza dos Santos</h1>
+            <p>Arquiteto de Soluções | Inovação e Tecnologia</p>
+        </header>
+
+        <div class="action-links">
+            <!-- Botão 1: WhatsApp -->
+            <a href="https://wa.me/5524992324310?text=Ol%C3%A1%2C+vim+do+seu+site+e+gostaria+de+saber+mais." class="action-link" target="_blank">
+                <div class="icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="text-content">
+                    <strong>Iniciar Conversa Rápida</strong>
+                    <span>Tire uma dúvida ou fale diretamente comigo.</span>
+                </div>
+            </a>
+
+            <!-- Botão 2: Diagnóstico Gratuito -->
+            <a href="https://www.zalventecnologia.com.br/contact.html" class="action-link" target="_blank">
+                <div class="icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <div class="text-content">
+                    <strong>Começar Meu Diagnóstico Gratuito</strong>
+                    <span>Dê o primeiro passo para automatizar sua empresa.</span>
+                </div>
+            </a>
+
+            <!-- Botão 3: Site Completo -->
+            <a href="https://www.zalventecnologia.com.br" class="action-link" target="_blank">
+                <div class="icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="text-content">
+                    <strong>Explorar Site Completo</strong>
+                    <span>Conheça todas as nossas soluções em detalhes.</span>
+                </div>
+            </a>
+        </div>
+
+        <footer class="social-footer">
+            <a href="https://www.linkedin.com/company/zalven-intelig%C3%AAncia-operacional" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/zalven.tecnologia/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </footer>
+
+    </div>
+
+</body>
+</html>
